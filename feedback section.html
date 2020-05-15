@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="image/icon feed.png">
+	<meta charset="UTF-8">
+	<title>FEEDBACK FORM</title>
+	<link rel="stylesheet" type="text/css" href="feedback section.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".btn").click(function(){
+				$(".input, .text-area").val(" ");
+			});
+		});
+	</script>
+	<link rel="stylesheet" href="feedback section.css">
+</head>
+<body>
+	<div id="main">
+ 
+  <span style="color: #F5FFFA;   font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU </span>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="welcome.html">WELCOME</a>
+<a href="aboutme.html">ABOUT ME</a>
+<a href="lifestyle.html">LIFESTYLE</a>
+<a href="friend.html">FRIEND</a>
+<a href="feedback section.html">FEEDBACK FORM</a>
+</div>
+
+
+
+<div class="wrapper">
+		<div class="contact-form">
+			<div class="title">FEEDBACK FORM</div>
+
+			<div class="input-fields">
+					<div class="items">
+						<label for="name" class="label">NAME</label>
+						<input id="name" type="text" class="input">
+					</div>
+					<div class="items">
+						<label for="email" class="label">EMAIL</label>
+						<input id="email" type="text" class="input">
+					</div>
+					
+					<div class="items">
+						<label for="msg" class="label">MESSAGE</label>
+						<textarea id="msg" class="text-area"></textarea>
+					</div>
+			</div>
+					
+<div class="app">
+  <p>What is your opinion of this page?</p>
+  
+
+  <div class="container">
+    <div class="item">
+      <label for="0">
+      <input class="radio" type="radio" name="feedback" id="0" value="0">
+      <span>🤬</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="1">
+      <input class="radio" type="radio" name="feedback" id="1" value="1">
+      <span>🙁</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="2">
+      <input class="radio" type="radio" name="feedback" id="2" value="2">
+      <span>😶</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="3">
+      <input class="radio" type="radio" name="feedback" id="3" value="3">
+      <span>😁</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="4">
+      <input class="radio" type="radio" name="feedback" id="4" value="4">
+      <span>😍</span>
+    </label>
+    </div>
+
+  </div>
+</div>
+
+<div onclick="myFunction()" class="btn">SUBMIT</div>
+	<script>
+function myFunction() {
+  alert("Thank you for your response.");
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+</script>
+			
+		</div>	
+	
+  
+               <footer> 
+     <font face = "Freestyle Script" size="8" color="#7B68EE">
+        <p><center>Copyright &copy; 2020, Fairuz's Profile </p>
+      <footer>
+</body>
+</html>
+
+

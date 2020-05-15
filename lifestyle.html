@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LIFESTYLE</title>
+<link rel="stylesheet" type="text/css" href="css/lifestylee.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<div class="widget-content">
+<marquee class="widget-content" >APA YANG KAU MILIKI SEKARANG TAK AKAN PERNAH KEKAL. SEMUA TU PINJAMAN DARIPADA ALLAH, SEMENTARA. WALAU SEMENTARA, IA MAMPU BUAT KAU RASA APA TU BAHAGIA. DERITA TU AKAN ADA, CUMA TAK AKAN LAMA. SEBAB TU ALLAH JADIKAN KAU MANUSIA, UNTUK KAU MENEROKA APA YANG DIA CIPTA</marquee>
+</div>     
+<body background="image/background lifestyle.gif">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="welcome.html">WELCOME</a>
+<a href="aboutme.html">ABOUT ME</a>
+<a href="lifestyle.html">LIFESTYLE</a>
+<a href="friend.html">FRIEND</a>
+<a href="feedback section.html">FEEDBACK FORM</a>
+</div>
+
+<div id="main">
+  <span style="color:white; font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+   
+
+
+
+  <h2>My Hobbies</h2>
+  <center>
+<div class="image-container image-container-num1">
+  <div class="image image-num1">
+    <img src="image/hobi 1.jpg" />
+  </div>
+  <div style="color:white;" class="caption caption-num1">
+    <span class="bottom">Playing badminton</span>
+  </div>
+</div><br class="break">
+<div class="image-container image-container-num2">
+  <div class="image image-num2">
+    <img src="image/hobi 2.jpg" />
+  </div>
+  <div style="color:white;" class="caption caption-num2">
+    Cooking
+  </div>
+</div><br class="break">
+<div class="image-container image-container-num3">
+  <div class="image image-num3">
+    <img src="image/hobi 3.jpg" />
+  </div><br class="break">
+  <div style="color:white;" class="caption caption-num3">
+    Cycling
+  </div>
+</div><br class="break">
+<div class="image-container image-container-num4">
+  <div class="image image-num4">
+    <img src="image/hobi 4.jpg" />
+  </div>
+  <div style="color:white;" class="caption caption-num4">
+    Sleeping
+  </div><br class="break">
+</div><br class="break">
+<div class="image-container image-container-num5">
+  <div class="image image-num5">
+    <img src="image/hobi 5.jpg" />
+  </div>
+  <div style="color:white;" class="caption caption-num5">
+    Watching cartoon
+  </div>
+
+</div>
+</center>
+
+<div class="table-title">
+<h3>Favourite Cartoon</h3>
+</div>
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">TITLE</th>
+<th class="text-left">CARTOON</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<tr>
+<td class="text-left">BOBOIBOY</td>
+<td class="text-left"><video width="320" height="240" controls>
+  <source src="Video/Boboiboy.mp4" type="video/mp4">
+</video></td>
+</tr>
+<tr>
+<td class="text-left">Ejen Ali</td>
+<td class="text-left"><video width="320" height="240" controls>
+  <source src="Video/Ejen Ali.mp4" type="video/mp4">
+</video></td>
+</tr>
+<tr>
+<td class="text-left">Spongebob Squarepant</td>
+<td class="text-left"><video width="320" height="240" controls>
+  <source src="Video/Spongebob Squarepant.mp4" type="video/mp4">
+</video></td>
+</tr>
+<tr>
+<td class="text-left">Wall-E</td>
+<td class="text-left"><video width="320" height="240" controls>
+  <source src="Video/Wall-E.mp4" type="video/mp4">
+</video></td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="table-title">
+<h3>Favourite Surah </h3>
+</div>
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">TITLE</th>
+<th class="text-left">Surah</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<tr>
+<td class="text-left">Surah Ar-Rahman</td>
+<td class="text-left"><audio controls>
+  <source src="Audio/Muzammil Hasballah Terbaru - Surat Ar Rahman.mp3" type="audio/mpeg">
+</audio></td>
+</tr>
+<tr>
+<td class="text-left">Al-Waqiah</td>
+<td class="text-left"><audio controls>
+  <source src="Audio/AL-WAQIAH (IRAMA KURDI) - Muzammil Hasballah.mp3" type="audio/mpeg">
+</audio></td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="table-title">
+<h3>Favorite Song</h3>
+</div>
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">TITLE</th>
+<th class="text-left">SONG</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<tr>
+<td class="text-left">Mirae Kiroro</td>
+<td class="text-left"><audio controls>
+  <source src="Audio/Mirae kiroro Lyrics.mp3" type="audio/mpeg"></td>
+</tr></td>
+</tr>
+<tr>
+<td class="text-left">Another Day (Hotel Del Luna)</td>
+<td class="text-left"><audio controls>
+  <source src="Audio/[MV] 먼데이 키즈(Monday Kiz), 펀치(Punch) - Another Day (Hotel Del Luna (호텔 델루나) OST Part.1).mp3" type="audio/mpeg"></td>
+</tr>
+<tr>
+<td class="text-left"> Our Times</td>
+<td class="text-left"><audio controls>
+  <source src="Audio/Our Times我的少女时代电影主題曲 -小幸运MV by 田馥甄.mp3" type="audio/mpeg"></td>
+</tr>
+<tr>
+<td class="text-left">The Elegance of Pachelbel Serenade</td>
+<td class="text-left"><audio controls>
+  <source src="Audio/The Elegance of Pachelbel Serenade.mp3" type="audio/mpeg"></td>
+</tr>
+<tr>
+<td class="text-left">Lee Hi (이하이)- 'My Love </td>
+<td class="text-left"><audio controls>
+  <source src="Audio/Lee Hi (이하이)- 'My Love (내 사랑)' (Scarlet Heart Ryeo OST, Part 10) [HanRomEng lyrics].mp3" type="audio/mpeg"></td>
+</tr>
+</tbody>
+</table>
+
+ 
+			 <div class="icon-bar">
+  <a href="https://www.facebook.com/fairuz.ayuni.16" class="facebook"><i class="fa fa-facebook"></i></a> 
+ <a href="https://twitter.com/NiallOfficial" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.instagram.com/fairuzayuni_/?hl=en" class="instagram" ><i class="fa fa-instagram"></i></a> 
+  <a href="https://fairuzayuni04@gmail.com" class="google"><i class="fa fa-google"></i></a> 
+</div>
+ 
+
+							 <footer> 
+		 <font face = "Freestyle Script" size="8" color="#7B68EE">
+				<p><center>Copyright &copy; 2020, Fairuz's Profile </p>
+			<footer>
+
+    
+
+
+
+
+</body>
+</html> 
+

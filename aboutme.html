@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		  <title>FAIRUZ AYUNI</title>
+		  <link rel="icon" href="image/fairuz ayuni.jpg">
+		  <link rel="stylesheet" href="css/bootstrap.css">
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		  <link rel="stylesheet" href="mystyle.css">
+		  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    
+   
+    
+    </head>
+
+    <body background="image/bground.jpg">
+
+  <nav role='navigation' id="mainnav">
+    <br><br><br>
+  <ul class="gap" open>
+    <li><a href="welcome.html">WELCOME</a></li>
+    <li><a href="aboutme.html">ABOUT ME</a></li>
+    <li><a href="lifestyle.html">LIFESTYLE</a></li>
+    <li><a href="friend.html">FRIEND</a></li>
+   <li><a href="feedback section.html">FEEDBACK FORM</a></li>
+ </ul>
+
+    	</nav>
+    	<div class="hamb">
+  <a href="#"><i class="fa fa-bars"> MENU</i></a>
+</div> 
+
+<canvas id="bubble"></canvas>
+<center>
+			
+			<!--FONT-->
+				<font face = "Stencil" size="6" weight="bold" color="#000000">
+			    <h1><u> About Me :)</u></h1>
+				
+				<font face = "Freestyle Script" weight="bold" size="20" color="#000000">
+				<h2>Hi, everyone. First of all, let me introduce myself to you! ^_^</h2> 
+				
+				
+				<!--IMAGE-->
+				<img id="profile" src="image/fairuz ayuni.jpg" alt="FAIRUZ" width="200" height="300" class="center" />
+			  
+            </center>
+		   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+<script>
+  
+var w = window.innerWidth,
+    h = window.innerHeight,
+    canvas = document.getElementById('bubble'),
+    ctx = canvas.getContext('2d'),
+    rate = 100,
+    arc = 100,
+    time,
+    count,
+    size =10,
+    speed = 20,
+    lights = new Array,
+    colors = ['#d59254','#ffffff','#1f2839','#cf7693'];
+
+canvas.setAttribute('width',w);
+canvas.setAttribute('height',h);
+
+function init() {
+  time = 0;
+  count = 0;
+
+  for(var i = 0; i < arc; i++) {
+    lights[i] = {
+      x: Math.ceil(Math.random() * w),
+      y: Math.ceil(Math.random() * h),
+      toX: Math.random() * 5 + 1,
+      toY: Math.random() * 5 + 1,
+      c: colors[Math.floor(Math.random()*colors.length)],
+      size: Math.random() * size
+    }
+  }
+}
+
+function bubble() {
+  ctx.clearRect(0,0,w,h);
+
+  for(var i = 0; i < arc; i++) {
+    var li = lights[i];
+    
+    ctx.beginPath();
+    ctx.arc(li.x,li.y,li.size,0,Math.PI*2,false);
+    ctx.fillStyle = li.c;
+    ctx.fill();
+    
+    li.x = li.x + li.toX * (time * 0.05);
+    li.y = li.y + li.toY * (time * 0.05);
+    
+    if(li.x > w) { li.x = 0; }
+    if(li.y > h) { li.y = 0; }
+    if(li.x < 0) { li.x = w; }
+    if(li.y < 0) { li.y = h; }
+  }
+  if(time < speed) {
+    time++;
+  }
+  timerID = setTimeout(bubble,1000/rate);
+}
+init();
+bubble(); 
+
+//navigation (this is my code)
+var animation = 'easeOutCubic';
+    delay     = 60;
+
+$(document)
+  .on('click', '.fa-bars', function(){
+    var i = 0;
+    $('nav').before($('#bubble'));
+    $('#bubble').fadeIn();
+    $('#mainnav').find('li').each(function(){
+      var that = $(this);
+      i++;
+      (function(i, that){
+          setTimeout(function(){
+            that
+              .animate(
+                { 'left'   : '20px' }, 
+                { duration : 350, 
+                  easing   : animation })
+              .fadeIn({queue: false});
+          }, delay * i)
+      }(i, that))
+    }); 
+    $('.fa-bars').fadeOut(100,function(){
+      $(this)
+        .removeClass('fa-bars')
+        .addClass('fa-times')
+        .fadeIn(); 
+    });
+  })
+  .on('click', '#bubble, .fa-times', function(){ 
+    $('#bubble').fadeOut();
+    $('#mainnav').find('li')
+      .animate(
+        { 'left'   : '-550px' }, 
+        { duration : 250 })
+      .fadeOut({queue: false});
+    
+    $('.hamb').fadeOut(100, function(){
+      $(this)
+        .find($('i'))
+        .removeClass('fa-times')
+        .addClass('fa-bars')
+        .end()
+        .fadeIn();
+    });
+  }) 
+    
+
+    var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 62) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width  + "%";
+      }
+    }
+  }
+}
+</script>
+		   <!--LIST-->
+		   
+		   <ul>
+		         <font face = "Courier New" size="6" color="#000000">
+			<p>   <li><b>NAME :</b> Fairuz Ayuni Binti Hassri</li> </p>
+			  
+			 <p>  <li><b>CLASS :</b> CS2304B1</li> </p>
+			   
+			<p>	<li><b>DATE OF BIRTH:</b> 4 April 1999</li> </p>
+				
+			<p>	<li><b>PLACE OF BIRTH:</b> Hospital Raja Perempuan Zainab II</li> </p>
+				
+			<p>   <li><b>FAMILY :</b>
+			
+						<ul>
+						  <li>PARENTS</li>
+							<ul>
+						  <li><b>FATHER :</b> Hassri Bin Wan Hasan</li>
+						   <li><b>MOTHER :</b> Noorasiah Binti Kadir</li>
+						</ul>
+							</ul>
+						
+						<ul>
+						  <li>SIBLINGS</li>
+							
+						  <ol>	
+							  <li>Muhammad Zarif Bin Hassri</li>
+							  <li>Masturina Zulaikha Binti Hassri</li>
+							  <li>Damia Maisarah Binti Hassri</li>
+							</ol>
+						
+							</ul>
+							 <p><b><li>HOW MUCH I LIKE PROGRAMMING: </b></li></p>
+							<div id="myProgress">
+							  <div id="myBar">10%</div>
+							</div>
+							<button onclick="move()">JUST CLICK</button> 
+
+							                             
+			 
+			 <div class="icon-bar">
+  <a href="https://www.facebook.com/fairuz.ayuni.16" class="facebook"><i class="fa fa-facebook"></i></a> 
+ <a href="https://twitter.com/NiallOfficial" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.instagram.com/fairuzayuni_/?hl=en" class="instagram" ><i class="fa fa-instagram"></i></a> 
+  <a href="https://fairuzayuni04@gmail.com" class="google"><i class="fa fa-google"></i></a> 
+</div>
+ 
+		
+							 <footer> 
+		 <font face = "Freestyle Script" size="8" color="#7B68EE">
+				<p><center>Copyright &copy; 2020, Fairuz's Profile </p>
+			<footer>
+		 	<strong>
+		
+     </body>
+</html>

@@ -1,0 +1,204 @@
+/*feedback section*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body{
+  background: url('image/tenor.gif') no-repeat top center;
+  background-size:cover;
+  width: 100%;
+  height: 50vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+ margin: 0;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+ 
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-form{
+  width: 200%;
+  max-width: 500px;
+  height: auto;
+  background: rgba(0,0,0,0.7);
+  padding: 40px 50px;
+  border-radius: 5px;
+}
+
+.title{
+  font-size: 2em;
+  line-height: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #ffc107;
+  padding-bottom: 15px;
+}
+
+.input-fields {
+    padding: 0 30px;
+}
+
+.input-fields .items{
+  width: 100%;
+  padding-bottom: 15px;
+} 
+
+.input-fields .items .label{
+  display: block;
+    font-size: 1em;
+    color: #ffecb3;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    padding-bottom: 5px;
+}
+
+.input-fields .items .input,
+.input-fields .items .text-area{
+  background: transparent;
+    border: 0;
+    border: 1px solid #ffecb3;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1em;
+    color: #ffecb3;
+    border-radius: 3px;
+}
+
+.btn{
+  margin: 0 30px;
+  background:#CD853F;
+  color: #ffecb3;
+  font-size: 1.25em;  
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
+.items #msg{
+  height: 100px;
+}
+
+
+/* jquery code */
+.input-fields .items .input.active .label{
+  font-size: 15px;
+  top: 0;
+}
+
+@media screen and (max-width: 750px){
+  .input-fields {
+      padding: 0;
+  }
+}
+
+
+p {
+  color: #ffecb3; 
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.app {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.radio {
+  display: none;
+}
+.radio ~ span {
+  font-size: 3rem;
+  filter: grayscale(100);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio:checked ~ span {
+  filter: grayscale(0);
+  font-size: 4rem;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#48D1CC;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #F5FFFA;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #F5FFFA;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+

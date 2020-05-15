@@ -1,0 +1,473 @@
+body {
+  background:url(image/background lifestyle.gif);
+  font-family: "Dancing Script";
+  transition: background-color .5s;
+  font-size: 22px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+h2 {
+  font-family: Dancing Script;
+  font-size:50px;
+  text-align:center;
+  color:black;
+  text-align: center;
+  color: #FAFAD2;
+  font-size: 45px;
+  margin: 32px;
+}
+.image-container {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+}
+.image {
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  transition: all .5s;
+}
+.image img {
+  max-width: 100%;
+}
+.caption {
+  width: 200px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(0,0,0,.8);
+  z-index: 2;
+  font-weight: 300;
+  transition: all .5s;
+}
+.caption-num1 {
+  position: relative;
+  height: 60px;
+  padding: none;
+  transform: rotate(45deg) translateY(-280px) translateX(-50%);
+}
+.bottom {
+  position: absolute;
+  bottom: 15px;
+  left: 0px;
+  right: 0;
+}
+.image-container-num1:hover .caption-num1 {
+  transform: rotate(45deg) translateY(-200px) translateX(-50%)
+}
+.caption-num2 {
+  transform: translateY(140px);
+}
+.image-container-num2:hover .image-num2 {
+  opacity: .8;
+  transform: translateY(-50%) translateY(0px);
+}
+.image-container-num2:hover .caption-num2 {
+  transform: translateY(-37px);
+}
+.image-num3 img {
+  max-width: none;
+  max-height: 100%;
+}
+.image-num3 {
+  direction: rtl;
+}
+.caption-num3 {
+  opacity: 0;
+  width: 300px;
+  text-align:right;
+  padding-right: 14px;
+  transform: translateY(-100%);
+}
+.image-container-num3:hover .image-num3 {
+  transform: translateX(50%);
+}
+.image-container-num3:hover .caption-num3 {
+  opacity: 1;
+  transform: translateY(-100%) translateX(-114px);
+}
+.image-container-num4:hover .image-num4 {
+  transform: scale(1.5) rotate(-10deg);
+}
+.image-container-num4:hover .caption-num4 {
+  transform: translateY(-100%);
+}
+.image-num5 img {
+  max-width: none;
+  transform: translateY(-50px) translateX(-50px);
+}
+.caption-num5 {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.image-container-num5:hover .image-num5 {
+  transform: rotate(45deg);
+}
+.image-container-num5:hover .caption-num5 {
+  opacity: 1;
+}
+.caption-num6 {
+  transform: translateY(-200px) translateY(-100%);
+}
+.image-container-num6:hover .caption-num6 {
+  transform: translateY(-200px);
+}
+.image-container-num6:hover .image-num6 {
+  opacity: .5;
+}
+.caption-num7 {
+  height: 200px;
+  background: none;
+  color: #333;
+  font-size: 20px;
+  opacity: 0;
+}
+.image-container-num7:hover .caption-num7 {
+  opacity: 1;
+  transform: translateY(-75%);
+}
+.image-container-num7:hover .image-num7 {
+  transform: scale(1.5);
+  opacity: .15;
+}
+.break {
+  display: none;
+}
+@media all and (max-width: 650px) {
+  .image-container {
+    margin: 30px;
+    outline: solid 20px #eee;
+  }
+  .break {
+    display: initial;
+  }
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+
+
+div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #FAFAD2;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Lucida Handwriting";
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-align: center;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+.icon-bar {
+  right: 0;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 40px;
+  transition: all 3s ease;
+  color: white;
+  font-size: 25px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+.instagram {
+  background:#3f729b;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+widget-content{
+color: white:;
+
+
+}
